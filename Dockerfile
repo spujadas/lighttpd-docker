@@ -1,4 +1,4 @@
-# Dockerfile for mini-httpd
+# Dockerfile for lighttpd
 
 FROM alpine
 
