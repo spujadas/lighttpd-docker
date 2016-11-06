@@ -11,6 +11,8 @@ RUN apk add --update --no-cache \
 # http://serverfault.com/questions/240038/lighttpd-broken-when-serving-from-virtualbox-shared-folder
 RUN echo server.network-backend = \"writev\" >> /etc/lighttpd/lighttpd.conf
 
+COPY etc/lighttpd/* /etc/lighttpd/
+
 EXPOSE 80
 
 VOLUME /var/www/localhost
