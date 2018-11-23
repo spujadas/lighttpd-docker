@@ -10,6 +10,8 @@
 # $ sudo docker exec -it lighttpddocker_lighttpd_1 ash
 
 lighttpd:
+    container_name: lighttpd
     build: .
+    restart: always
     ports:
         - "8001:80" # for testing purposes, (un)comment as required
