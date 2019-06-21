@@ -45,6 +45,7 @@ Add the following lines in an existing or a new `docker-compose.yml` file:
 	    - <config-directory>:/etc/lighttpd
 	  ports:
 	    - "<http-port>:80"
+	  tty: true
 
 **Note** – The `- <config-directory>:…` line is optional, it can be used to override the default configuration files with your own.
 

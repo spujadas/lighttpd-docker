@@ -15,3 +15,4 @@ lighttpd:
     restart: always
     ports:
         - "8001:80" # for testing purposes, (un)comment as required
+    tty: true
