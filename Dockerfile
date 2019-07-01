@@ -2,8 +2,10 @@
 
 FROM alpine
 
+ENV LIGHTTPD_VERSION=1.4.54-r0
+
 RUN apk add --update --no-cache \
-	lighttpd \
+	lighttpd=${LIGHTTPD_VERSION} \
 	lighttpd-mod_auth \
   && rm -rf /var/cache/apk/*
 
