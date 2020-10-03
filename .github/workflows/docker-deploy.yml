@@ -22,11 +22,9 @@ jobs:
       - name: Login to Docker Hub
         run: docker login --username ${{ secrets.DOCKER_USERNAME }} --password ${{ secrets.DOCKER_TOKEN }}
           
-      -
-        name: Run Buildx
+      - name: Run Buildx
         run: |
           docker buildx build \
             --platform linux/amd64,linux/arm64,linux/386,linux/arm/v7,linux/arm/v6 \
-            --push \
-            . \
-            -t sebp/lighttpd
+            --push . \
+            -t sebp/lighttpd:latest -t sebp/lighttpd:1.4.55-r1
