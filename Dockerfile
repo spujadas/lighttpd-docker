@@ -2,7 +2,7 @@
 
 FROM alpine
 
-ENV LIGHTTPD_VERSION=1.4.57-r0
+ENV LIGHTTPD_VERSION=1.4.59-r0
 
 RUN apk add --update --no-cache \
 	lighttpd=${LIGHTTPD_VERSION} \
@@ -14,7 +14,7 @@ COPY start.sh /usr/local/bin/
 
 EXPOSE 80
 
-VOLUME /var/www/localhost
+VOLUME /var/www/localhost/htdocs
 VOLUME /etc/lighttpd
 
 CMD ["start.sh"]

@@ -33,4 +33,4 @@ jobs:
           docker buildx build \
             --platform linux/amd64,linux/arm64,linux/386,linux/arm/v7,linux/arm/v6 \
             --push . \
-            -t sebp/lighttpd:latest -t sebp/lighttpd:1.4.57-r0
+            -t sebp/lighttpd:latest -t sebp/lighttpd:1.4.59-r0
